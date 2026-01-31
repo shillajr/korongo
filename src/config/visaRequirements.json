@@ -1,0 +1,251 @@
+{
+  "countries": [
+    {
+      "id": "KE",
+      "name": "Kenya",
+      "flag": "🇰🇪",
+      "visaTypes": [
+        {
+          "type": "free",
+          "processingTime": "Instant",
+          "documentsRequired": [
+            "Valid passport"
+          ],
+          "status": "visa_free"
+        }
+      ]
+    },
+    {
+      "id": "UG",
+      "name": "Uganda",
+      "flag": "🇺🇬",
+      "visaTypes": [
+        {
+          "type": "free",
+          "processingTime": "Instant",
+          "documentsRequired": [
+            "Valid passport"
+          ],
+          "status": "visa_free"
+        }
+      ]
+    },
+    {
+      "id": "NG",
+      "name": "Nigeria",
+      "flag": "🇳🇬",
+      "visaTypes": [
+        {
+          "type": "required",
+          "processingTime": "5-7 business days",
+          "documentsRequired": [
+            "Valid passport",
+            "Proof of accommodation",
+            "Bank statements"
+          ],
+          "status": "visa_required"
+        }
+      ]
+    },
+    {
+      "id": "GH",
+      "name": "Ghana",
+      "flag": "🇬🇭",
+      "visaTypes": [
+        {
+          "type": "required",
+          "processingTime": "3-5 business days",
+          "documentsRequired": [
+            "Valid passport",
+            "Yellow fever vaccination",
+            "Return ticket"
+          ],
+          "status": "visa_required"
+        }
+      ]
+    },
+    {
+      "id": "ZA",
+      "name": "South Africa",
+      "flag": "🇿🇦",
+      "visaTypes": [
+        {
+          "type": "required",
+          "processingTime": "7-10 business days",
+          "documentsRequired": [
+            "Valid passport",
+            "Proof of funds",
+            "Accommodation proof"
+          ],
+          "status": "visa_required"
+        }
+      ]
+    },
+    {
+      "id": "EG",
+      "name": "Egypt",
+      "flag": "🇪🇬",
+      "visaTypes": [
+        {
+          "type": "on_arrival",
+          "processingTime": "15-30 minutes",
+          "documentsRequired": [
+            "Valid passport",
+            "Completed form at airport"
+          ],
+          "status": "visa_on_arrival"
+        }
+      ]
+    },
+    {
+      "id": "RW",
+      "name": "Rwanda",
+      "flag": "🇷🇼",
+      "visaTypes": [
+        {
+          "type": "free",
+          "processingTime": "Instant",
+          "documentsRequired": [
+            "Valid passport"
+          ],
+          "status": "visa_free"
+        }
+      ]
+    },
+    {
+      "id": "TZ",
+      "name": "Tanzania",
+      "flag": "🇹🇿",
+      "visaTypes": [
+        {
+          "type": "on_arrival",
+          "processingTime": "Immediate",
+          "documentsRequired": [
+            "Valid passport",
+            "Return ticket"
+          ],
+          "status": "visa_on_arrival"
+        }
+      ]
+    },
+    {
+      "id": "US",
+      "name": "United States",
+      "flag": "🇺🇸",
+      "visaTypes": [
+        {
+          "type": "required",
+          "processingTime": "10-15 business days",
+          "documentsRequired": [
+            "Valid passport",
+            "Proof of funds",
+            "Invitation letter"
+          ],
+          "status": "visa_required"
+        }
+      ]
+    },
+    {
+      "id": "GB",
+      "name": "United Kingdom",
+      "flag": "🇬🇧",
+      "visaTypes": [
+        {
+          "type": "required",
+          "processingTime": "10-15 business days",
+          "documentsRequired": [
+            "Valid passport",
+            "Proof of accommodation",
+            "Bank statements"
+          ],
+          "status": "visa_required"
+        }
+      ]
+    },
+    {
+      "id": "DE",
+      "name": "Germany",
+      "flag": "🇩🇪",
+      "visaTypes": [
+        {
+          "type": "required",
+          "processingTime": "5-7 business days",
+          "documentsRequired": [
+            "Valid passport",
+            "Proof of funds",
+            "Accommodation proof"
+          ],
+          "status": "visa_required"
+        }
+      ]
+    },
+    {
+      "id": "FR",
+      "name": "France",
+      "flag": "🇫🇷",
+      "visaTypes": [
+        {
+          "type": "required",
+          "processingTime": "5-7 business days",
+          "documentsRequired": [
+            "Valid passport",
+            "Proof of accommodation",
+            "Return ticket"
+          ],
+          "status": "visa_required"
+        }
+      ]
+    },
+    {
+      "id": "IN",
+      "name": "India",
+      "flag": "🇮🇳",
+      "visaTypes": [
+        {
+          "type": "required",
+          "processingTime": "3-5 business days",
+          "documentsRequired": [
+            "Valid passport",
+            "Proof of funds",
+            "Invitation letter"
+          ],
+          "status": "visa_required"
+        }
+      ]
+    },
+    {
+      "id": "AU",
+      "name": "Australia",
+      "flag": "🇦🇺",
+      "visaTypes": [
+        {
+          "type": "required",
+          "processingTime": "7-10 business days",
+          "documentsRequired": [
+            "Valid passport",
+            "Medical certificate",
+            "Police clearance"
+          ],
+          "status": "visa_required"
+        }
+      ]
+    },
+    {
+      "id": "BR",
+      "name": "Brazil",
+      "flag": "🇧🇷",
+      "visaTypes": [
+        {
+          "type": "required",
+          "processingTime": "5-7 business days",
+          "documentsRequired": [
+            "Valid passport",
+            "Proof of funds",
+            "Accommodation proof"
+          ],
+          "status": "visa_required"
+        }
+      ]
+    }
+  ]
+}

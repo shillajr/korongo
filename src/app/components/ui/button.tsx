@@ -9,22 +9,24 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm hover:shadow-md",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg transition-shadow",
         destructive:
-          "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60 shadow-sm",
+          "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60 shadow-md",
         outline:
-          "border bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          "border bg-background text-foreground hover:bg-secondary hover:text-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 transition-colors",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm",
         ghost:
-          "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
+          "hover:bg-accent/10 hover:text-accent-foreground dark:hover:bg-accent/20 transition-colors",
         link: "text-primary underline-offset-4 hover:underline",
+        accent:
+          "bg-warm-amber text-white hover:bg-warm-amber/90 shadow-md hover:shadow-lg transition-shadow",
       },
       size: {
-        default: "h-10 px-5 py-2.5 has-[>svg]:px-4",
-        sm: "h-9 gap-1.5 px-3.5 has-[>svg]:px-3",
-        lg: "h-12 px-7 has-[>svg]:px-5",
-        icon: "size-10",
+        default: "h-11 px-6 py-2.5 has-[>svg]:px-5 rounded-[10px]",
+        sm: "h-9 gap-1.5 px-3.5 has-[>svg]:px-3 rounded-lg",
+        lg: "h-12 px-8 has-[>svg]:px-6 rounded-[12px]",
+        icon: "size-10 rounded-lg",
       },
     },
     defaultVariants: {
@@ -50,7 +52,7 @@ function Button({
     <Comp
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
-      style={{ borderRadius: '3px' }}
+      style={{ borderRadius: 'inherit' }}
       {...props}
     />
   );

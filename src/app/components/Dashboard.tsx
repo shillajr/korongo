@@ -118,16 +118,16 @@ export function Dashboard({
       <div className="relative z-10">
         {/* Header - Modern & Clean */}
         <div className="bg-white sticky top-0 z-20 shadow-sm">
-          <div className="p-5 space-y-4">
+          <div className="p-6 space-y-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <CountryFlag country={currentCountry} size="lg" />
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-xl font-semibold">{currentCity}</span>
+                    <span className="text-2xl font-bold leading-tight">{currentCity}</span>
                   </div>
-                  <p className="text-sm text-muted-foreground capitalize flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5" />
+                  <p className="text-sm text-muted-foreground capitalize flex items-center gap-1.5 mt-1">
+                    <MapPin className="w-4 h-4" />
                     {currentCountry}
                   </p>
                 </div>
@@ -135,16 +135,16 @@ export function Dashboard({
               <OnlineStatusBadge />
             </div>
 
-            <div className="flex items-center gap-2 overflow-x-auto pb-1">
-              <Badge variant="secondary" className="flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5">
-                <Thermometer className="w-3.5 h-3.5" />
+            <div className="flex items-center gap-2 overflow-x-auto pb-2">
+              <Badge variant="secondary" className="flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5 shadow-sm">
+                <Thermometer className="w-4 h-4" />
                 {weather.temp}°C
               </Badge>
-              <Badge variant="secondary" className="whitespace-nowrap rounded-full px-3 py-1.5">
+              <Badge variant="secondary" className="whitespace-nowrap rounded-full px-3 py-1.5 shadow-sm">
                 {weather.condition}
               </Badge>
               <Badge variant="outline" className="flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5">
-                <Clock className="w-3.5 h-3.5" />
+                <Clock className="w-4 h-4" />
                 {new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}
               </Badge>
             </div>
@@ -152,35 +152,36 @@ export function Dashboard({
         </div>
 
         {/* Main Content */}
-        <div className="p-5 space-y-6">
+        <div className="p-6 space-y-8">
           
-          {/* Personalized Hero Section with Countdown - Tanzania Colors */}
-          <div className="bg-gradient-to-br from-[#1EB53A] via-[#000000] to-[#00A3DD] text-white p-5 rounded-xl relative overflow-hidden">
-            {/* Tanzania flag diagonal stripe effect */}
-            <div className="absolute inset-0 overflow-hidden">
-              <div className="absolute -inset-1 bg-gradient-to-br from-transparent via-[#FCD116] to-transparent opacity-30 rotate-[-20deg] scale-150" />
+          {/* Personalized Hero Section with Countdown - Modern Airbnb-style */}
+          <div className="bg-gradient-to-br from-primary/85 via-primary/75 to-primary/90 text-white p-8 rounded-[20px] relative overflow-hidden shadow-lg">
+            {/* Subtle geometric accent */}
+            <div className="absolute inset-0 overflow-hidden opacity-15">
+              <div className="absolute -top-8 -right-8 w-32 h-32 bg-warm-amber rounded-full blur-2xl" />
+              <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-accent rounded-full blur-2xl" />
             </div>
             <div className="relative z-10">
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-2xl">👋</span>
-                <h1 className="text-xl font-bold">Welcome back, {userName}!</h1>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-3xl">👋</span>
+                <h1 className="text-3xl font-bold leading-tight">Welcome back, {userName}!</h1>
               </div>
-              <p className="text-sm opacity-90 mb-4">Your AFCON 2027 journey awaits</p>
+              <p className="text-base opacity-90 mb-6 font-medium">Your AFCON 2027 journey awaits</p>
               
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-8 bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20">
                 <div className="text-center">
-                  <span className="text-3xl font-bold">{daysUntilStart > 0 ? daysUntilStart : 0}</span>
-                  <p className="text-xs opacity-80">Days to Kickoff</p>
+                  <span className="text-4xl font-bold block">{daysUntilStart > 0 ? daysUntilStart : 0}</span>
+                  <p className="text-sm opacity-90 mt-1 font-medium">Days to Kickoff</p>
                 </div>
-                <div className="w-px h-10 bg-[#FCD116]/50" />
+                <div className="w-px h-12 bg-white/30" />
                 <div className="text-center">
-                  <span className="text-3xl font-bold">{quickStats.matchesPlanned}</span>
-                  <p className="text-xs opacity-80">Matches Planned</p>
+                  <span className="text-4xl font-bold block">{quickStats.matchesPlanned}</span>
+                  <p className="text-sm opacity-90 mt-1 font-medium">Matches</p>
                 </div>
-                <div className="w-px h-10 bg-[#FCD116]/50" />
+                <div className="w-px h-12 bg-white/30" />
                 <div className="text-center">
-                  <span className="text-3xl font-bold">3</span>
-                  <p className="text-xs opacity-80">Countries</p>
+                  <span className="text-4xl font-bold block">3</span>
+                  <p className="text-sm opacity-90 mt-1 font-medium">Countries</p>
                 </div>
               </div>
             </div>
@@ -188,25 +189,25 @@ export function Dashboard({
 
           {/* Live Score Ticker */}
           {liveMatches.some(m => m.isLive) && (
-            <div className="overflow-hidden rounded-lg bg-gray-100">
-              <div className="py-2 px-3 bg-red-600 text-white text-xs font-semibold flex items-center gap-2">
-                <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
-                LIVE MATCHES
+            <div className="overflow-hidden rounded-[16px] bg-gray-100 shadow-md border border-border">
+              <div className="py-3 px-4 bg-red-600 text-white text-xs font-bold flex items-center gap-2 uppercase tracking-wide">
+                <span className="w-2.5 h-2.5 bg-white rounded-full animate-pulse" />
+                Live Matches
               </div>
-              <div className="overflow-x-auto whitespace-nowrap py-3 px-2">
+              <div className="overflow-x-auto whitespace-nowrap py-4 px-3">
                 <div className="inline-flex gap-3">
                   {liveMatches.map(match => (
                     <div 
                       key={match.id} 
-                      className="inline-flex items-center gap-3 bg-white px-4 py-2.5 rounded-lg shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+                      className="inline-flex items-center gap-3 bg-white px-5 py-3 rounded-[14px] shadow-md cursor-pointer hover:shadow-lg hover:scale-105 transition-all"
                       onClick={() => onNavigate('matches')}
                     >
                       {match.isLive && (
                         <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
                       )}
-                      <span className="font-medium">{match.teamA}</span>
-                      <span className="font-bold text-lg">{match.scoreA} - {match.scoreB}</span>
-                      <span className="font-medium">{match.teamB}</span>
+                      <span className="font-semibold text-sm">{match.teamA}</span>
+                      <span className="font-bold text-base">{match.scoreA} - {match.scoreB}</span>
+                      <span className="font-semibold text-sm">{match.teamB}</span>
                     </div>
                   ))}
                 </div>
@@ -214,18 +215,18 @@ export function Dashboard({
             </div>
           )}
 
-          {/* Quick Stats Row - Tanzania Colors */}
-          <div className="grid grid-cols-4 gap-2">
+          {/* Quick Stats Row - Spacious Cards */}
+          <div className="grid grid-cols-4 gap-3">
             {[
-              { icon: Calendar, value: quickStats.matchesPlanned.toString(), label: 'Matches', color: 'text-[#1EB53A]' },
-              { icon: Ticket, value: quickStats.ticketsBought.toString(), label: 'Tickets', color: 'text-[#00A3DD]' },
-              { icon: Globe, value: quickStats.countriesVisited.toString(), label: 'Countries', color: 'text-[#FCD116]' },
-              { icon: Clock, value: `${quickStats.hoursToNextBorder}h`, label: 'To Border', color: 'text-[#1EB53A]' },
+              { icon: Calendar, value: quickStats.matchesPlanned.toString(), label: 'Matches', color: 'text-primary' },
+              { icon: Ticket, value: quickStats.ticketsBought.toString(), label: 'Tickets', color: 'text-blue-600' },
+              { icon: Globe, value: quickStats.countriesVisited.toString(), label: 'Countries', color: 'text-warm-amber' },
+              { icon: Clock, value: `${quickStats.hoursToNextBorder}h`, label: 'To Border', color: 'text-primary' },
             ].map(stat => (
-              <div key={stat.label} className="bg-white p-3 rounded-lg text-center border border-gray-100">
-                <stat.icon className={`mx-auto ${stat.color}`} size={20} />
-                <p className="font-bold mt-1 text-lg">{stat.value}</p>
-                <p className="text-xs text-muted-foreground">{stat.label}</p>
+              <div key={stat.label} className="bg-white p-4 rounded-[14px] text-center border border-border shadow-sm hover:shadow-md transition-shadow">
+                <stat.icon className={`mx-auto ${stat.color}`} size={24} />
+                <p className="font-bold mt-2 text-lg">{stat.value}</p>
+                <p className="text-xs text-muted-foreground font-medium mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -238,54 +239,54 @@ export function Dashboard({
           />
 
           {/* Next Match Card - Hero Style */}
-          <Card className="overflow-hidden border-0">
-            <div className="relative bg-gradient-to-br from-primary/10 via-primary/5 to-transparent p-6">
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Ticket className="w-5 h-5 text-primary" />
+          <Card className="overflow-hidden border-0 shadow-lg">
+            <div className="relative bg-gradient-to-br from-primary/8 via-white to-accent/5 p-7">
+              <div className="flex items-start justify-between mb-5">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-[12px] bg-primary/10 flex items-center justify-center">
+                    <Ticket className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h2 className="font-semibold text-lg">Next Match</h2>
-                    <p className="text-sm text-muted-foreground">Don't miss it!</p>
+                    <h2 className="font-bold text-xl">Next Match</h2>
+                    <p className="text-sm text-muted-foreground font-medium mt-0.5">Don't miss it!</p>
                   </div>
                 </div>
-                <Badge className="bg-primary text-primary-foreground rounded-full px-3 py-1">Today</Badge>
+                <Badge variant="accent" className="rounded-full px-3 py-1.5 text-xs font-semibold">Today</Badge>
               </div>
               
-              <div className="space-y-4">
-                <div className="flex items-center justify-between bg-white rounded-2xl p-4">
+              <div className="space-y-5">
+                <div className="flex items-center justify-between bg-white rounded-[16px] p-5 shadow-sm border border-border">
                   <div className="flex items-center gap-4 flex-1">
                     <div className="text-right flex-1">
-                      <div className="font-semibold text-lg">{nextMatch.homeTeam}</div>
+                      <div className="font-bold text-xl">{nextMatch.homeTeam}</div>
                     </div>
-                    <div className="px-4 py-2 bg-muted rounded-full">
-                      <span className="font-bold text-sm">VS</span>
+                    <div className="px-4 py-3 bg-muted rounded-full">
+                      <span className="font-bold text-xs">VS</span>
                     </div>
                     <div className="text-left flex-1">
-                      <div className="font-semibold text-lg">{nextMatch.awayTeam}</div>
+                      <div className="font-bold text-xl">{nextMatch.awayTeam}</div>
                     </div>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="flex items-center gap-2 text-sm">
-                    <Calendar className="w-4 h-4 text-primary" />
-                    <span className="font-medium">Jan 17, 2027</span>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex items-center gap-3 text-sm font-medium">
+                    <Calendar className="w-5 h-5 text-primary flex-shrink-0" />
+                    <span>Jan 17, 2027</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Clock className="w-4 h-4 text-primary" />
-                    <span className="font-medium">{nextMatch.time} EAT</span>
+                  <div className="flex items-center gap-3 text-sm font-medium">
+                    <Clock className="w-5 h-5 text-primary flex-shrink-0" />
+                    <span>{nextMatch.time} EAT</span>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-2 text-sm text-muted-foreground">
-                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
+                <div className="flex items-start gap-3 text-sm text-muted-foreground font-medium">
+                  <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>{nextMatch.venue}, {nextMatch.city}</span>
                 </div>
 
                 <Button 
-                  className="w-full mt-2 h-12 font-semibold transition-all" 
+                  className="w-full h-12 font-semibold transition-all" 
                   size="lg" 
                   onClick={() => onNavigate('matchday')}
                 >
@@ -295,88 +296,88 @@ export function Dashboard({
             </div>
           </Card>
 
-          {/* Border Status - Tanzania Blue */}
-          <Card className="overflow-hidden border-0">
-            <div className="p-5">
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#00A3DD]/10 flex items-center justify-center">
-                    <Navigation className="w-5 h-5 text-[#00A3DD]" />
+          {/* Border Status - Modern Style */}
+          <Card className="overflow-hidden border-0 shadow-md">
+            <div className="p-6">
+              <div className="flex items-start justify-between mb-5">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-[12px] bg-blue-600/10 flex items-center justify-center">
+                    <Navigation className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Next Border</h3>
-                    <p className="text-sm text-muted-foreground">Real-time status</p>
+                    <h3 className="font-bold text-lg">Next Border</h3>
+                    <p className="text-sm text-muted-foreground font-medium mt-0.5">Real-time status</p>
                   </div>
                 </div>
                 <Badge 
                   variant="outline"
                   className={`rounded-full ${
-                    borderStatus.status === 'light' ? 'border-[#1EB53A] text-[#1EB53A] bg-[#1EB53A]/10' :
-                    borderStatus.status === 'moderate' ? 'border-[#FCD116] text-amber-700 bg-[#FCD116]/20' :
-                    'border-red-500 text-red-700 bg-red-50'
+                    borderStatus.status === 'light' ? 'border-primary text-primary bg-primary/10' :
+                    borderStatus.status === 'moderate' ? 'border-warm-amber text-warm-amber bg-warm-amber/10' :
+                    'border-red-600 text-red-600 bg-red-50'
                   }`}
                 >
                   {borderStatus.waitTime} wait
                 </Badge>
               </div>
               
-              <div className="space-y-3">
-                <div className="font-semibold text-base">{borderStatus.name}</div>
-                <div className="text-sm text-muted-foreground">
+              <div className="space-y-4">
+                <div className="font-bold text-lg">{borderStatus.name}</div>
+                <div className="text-sm text-muted-foreground font-medium">
                   Crossing to {borderStatus.nextCountry}
                 </div>
-                <div className="flex items-center gap-3 pt-1">
-                  <div className="flex-1 h-2.5 bg-muted rounded-full overflow-hidden">
+                <div className="flex items-center gap-3 pt-2">
+                  <div className="flex-1 h-3 bg-secondary rounded-full overflow-hidden">
                     <div 
                       className={`h-full rounded-full transition-all ${
-                        borderStatus.status === 'light' ? 'bg-[#1EB53A]' :
-                        borderStatus.status === 'moderate' ? 'bg-[#FCD116]' :
-                        'bg-red-500'
+                        borderStatus.status === 'light' ? 'bg-primary' :
+                        borderStatus.status === 'moderate' ? 'bg-warm-amber' :
+                        'bg-red-600'
                       }`}
                       style={{ width: '60%' }}
                     />
                   </div>
-                  <span className="text-xs text-muted-foreground font-medium">Moderate</span>
+                  <span className="text-xs text-muted-foreground font-semibold">Moderate</span>
                 </div>
               </div>
             </div>
           </Card>
 
-          {/* FAN ID Widget Card - STANDOUT */}
+          {/* FAN ID Widget Card - Premium Standout */}
           <div className="relative">
-            {/* Gradient border effect */}
-            <div className="absolute -inset-1 bg-gradient-to-br from-[#1EB53A] via-[#FCD116] to-[#00A3DD] rounded-2xl opacity-75 blur-sm" />
-            <Card className="relative overflow-hidden border-0 bg-gradient-to-br from-white to-gray-50 shadow-xl">
-              {/* Diagonal stripe decoration */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[#FCD116]/30 to-transparent rounded-bl-full" />
+            {/* Gradient border accent */}
+            <div className="absolute -inset-0.5 bg-gradient-to-br from-primary via-warm-amber to-blue-600 rounded-[20px] opacity-30 blur-lg" />
+            <Card className="relative overflow-hidden border border-warm-amber/30 bg-gradient-to-br from-white to-warm-cream/20 shadow-xl">
+              {/* Diagonal accent */}
+              <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-warm-amber/40 to-transparent rounded-bl-3xl" />
               
-              <div className="p-6 relative z-10">
-                <div className="flex items-start justify-between mb-5">
+              <div className="p-7 relative z-10">
+                <div className="flex items-start justify-between mb-6">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1EB53A] to-[#00A3DD] flex items-center justify-center shadow-lg">
-                      <IdCard className="w-7 h-7 text-white" />
+                    <div className="w-16 h-16 rounded-[14px] bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center shadow-lg">
+                      <IdCard className="w-8 h-8 text-white" />
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <h3 className="font-bold text-lg">FAN ID</h3>
-                        <span className="text-xs bg-[#1EB53A]/10 text-[#1EB53A] px-2 py-0.5 rounded-full font-semibold">REQUIRED</span>
+                        <h3 className="font-bold text-xl">FAN ID</h3>
+                        <span className="text-xs bg-primary/10 text-primary px-2.5 py-1 rounded-full font-bold uppercase tracking-wide">Required</span>
                       </div>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-muted-foreground font-medium mt-1">
                         {fanIdData ? 'Your Stadium Access Pass' : 'Mandatory for AFCON 2027'}
                       </p>
                     </div>
                   </div>
                   {fanIdData && (
                     <Badge 
-                      className={`rounded-full px-3 py-1 ${
-                        fanIdData.status === 'approved' ? 'bg-[#1EB53A] text-white' :
-                        fanIdData.status === 'pending' ? 'bg-[#FCD116] text-black' :
-                        'bg-red-500 text-white'
+                      className={`rounded-full px-3 py-1.5 text-xs font-bold uppercase tracking-wide ${
+                        fanIdData.status === 'approved' ? 'bg-primary text-white' :
+                        fanIdData.status === 'pending' ? 'bg-warm-amber text-black' :
+                        'bg-red-600 text-white'
                       }`}
                     >
-                      {fanIdData.status === 'approved' && <CheckCircle className="w-3.5 h-3.5 mr-1.5" />}
-                      {fanIdData.status === 'pending' && <AlertCircle className="w-3.5 h-3.5 mr-1.5" />}
-                      {fanIdData.status === 'rejected' && <XCircle className="w-3.5 h-3.5 mr-1.5" />}
+                      {fanIdData.status === 'approved' && <CheckCircle className="w-4 h-4 mr-1.5" />}
+                      {fanIdData.status === 'pending' && <AlertCircle className="w-4 h-4 mr-1.5" />}
+                      {fanIdData.status === 'rejected' && <XCircle className="w-4 h-4 mr-1.5" />}
                       {fanIdData.status === 'approved' ? 'Active' : fanIdData.status === 'pending' ? 'Pending' : 'Rejected'}
                     </Badge>
                   )}
@@ -384,12 +385,13 @@ export function Dashboard({
                 
                 {fanIdData ? (
                   <div className="space-y-4">
-                    <div className="p-4 bg-gradient-to-br from-[#00A3DD]/15 via-white to-[#1EB53A]/15 rounded-xl border border-gray-100">
-                      <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wider">FAN ID Number</p>
-                      <p className="font-mono font-bold text-lg tracking-wide">{fanIdData.fanIdNumber}</p>
+                    <div className="p-5 bg-gradient-to-br from-blue-600/10 via-white to-primary/10 rounded-[14px] border border-border">
+                      <p className="text-xs text-muted-foreground mb-2 uppercase font-bold tracking-wider">FAN ID Number</p>
+                      <p className="font-mono font-bold text-xl tracking-widest">{fanIdData.fanIdNumber}</p>
                     </div>
                     <Button
-                      className="w-full h-12 bg-gradient-to-r from-[#1EB53A] to-[#00A3DD] hover:opacity-90 text-white font-semibold"
+                      variant="default"
+                      className="w-full h-12 bg-gradient-to-r from-primary to-blue-600 hover:opacity-90 text-white font-bold text-base shadow-md"
                       onClick={() => onNavigate('fanid')}
                     >
                       <IdCard className="w-5 h-5 mr-2" />
@@ -398,19 +400,20 @@ export function Dashboard({
                   </div>
                 ) : (
                   <div className="space-y-4">
-                    <div className="flex items-start gap-3 p-4 bg-[#FCD116]/25 rounded-xl border border-[#FCD116]/50">
-                      <AlertCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
+                    <div className="flex items-start gap-4 p-5 bg-warm-amber/20 rounded-[14px] border border-warm-amber/30">
+                      <AlertCircle className="w-6 h-6 text-warm-amber mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="text-sm font-medium text-amber-900 mb-1">
+                        <p className="text-sm font-bold text-warm-amber/90 mb-1">
                           FAN ID is mandatory
                         </p>
-                        <p className="text-xs text-amber-700">
+                        <p className="text-xs text-warm-amber/75 font-medium">
                           Required for stadium entry, fan zones, and special discounts
                         </p>
                       </div>
                     </div>
                     <Button
-                      className="w-full h-12 bg-gradient-to-r from-[#1EB53A] to-[#00A3DD] hover:opacity-90 text-white font-semibold shadow-lg"
+                      variant="accent"
+                      className="w-full h-12 text-white font-bold text-base shadow-lg"
                       onClick={() => onNavigate('fanid')}
                     >
                       <IdCard className="w-5 h-5 mr-2" />
@@ -422,11 +425,11 @@ export function Dashboard({
             </Card>
           </div>
 
-          {/* Smart Recommendations - Tanzania Colors */}
-          <Card className="p-4 border-0 bg-gradient-to-br from-[#00A3DD]/10 to-white">
-            <div className="flex items-center gap-2 mb-3">
-              <Zap className="w-5 h-5 text-[#00A3DD]" />
-              <h3 className="font-semibold">Recommended for You</h3>
+          {/* Smart Recommendations */}
+          <Card className="p-6 border-0 bg-gradient-to-br from-primary/8 to-white shadow-md">
+            <div className="flex items-center gap-3 mb-4">
+              <Zap className="w-6 h-6 text-primary font-bold" />
+              <h3 className="font-bold text-lg">Recommended for You</h3>
             </div>
             <div className="space-y-2">
               {!fanIdData && (

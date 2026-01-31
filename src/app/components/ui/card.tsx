@@ -10,7 +10,7 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
         "bg-card text-card-foreground flex flex-col gap-6 border transition-shadow",
         className,
       )}
-      style={{ borderRadius: '9px' }}
+      style={{ borderRadius: '16px' }}
       {...props}
     />
   );

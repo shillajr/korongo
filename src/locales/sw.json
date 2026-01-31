@@ -1,0 +1,107 @@
+{
+  "common": {
+    "next": "Inayofuata",
+    "back": "Rudi",
+    "continue": "Endelea",
+    "cancel": "Kataa",
+    "submit": "Wasilisha",
+    "skip": "Ruka",
+    "close": "Funga",
+    "loading": "Inapakua...",
+    "error": "Kosa",
+    "success": "Imefanikiwa",
+    "errorOccurred": "Kosa limetokea. Tafadhali jaribu tena.",
+    "whatsAppNumber": "Namba ya WhatsApp",
+    "email": "Barua pepe"
+  },
+  "arrivalFlow": {
+    "welcome": {
+      "title": "Karibu Tanzania",
+      "subtitle": "Mwongozo wako wa kuaminika kwa kuchimba Afrika Mashariki",
+      "description": "Hebu tukuhani kwa safari kamili",
+      "benefit1Title": "Amani & Usalama",
+      "benefit1Description": "Maeneo yaliyothibitishwa na mwongozo wa ndani yaliyothibitishwa",
+      "benefit2Title": "Mwongozo wa Muda Halisi",
+      "benefit2Description": "Pata arifa na sasisho zenye moja kwa moja katika muda wako",
+      "benefit3Title": "Huduma za Ndani",
+      "benefit3Description": "Tafuta huzuni zilizofichwa na uzoefu wa asili"
+    },
+    "countrySelector": {
+      "title": "Unakuja kutoka wapi?",
+      "subtitle": "Chagua nchi yako ya asili",
+      "searchPlaceholder": "Tafuta nchi...",
+      "noResults": "Hakuna nchi iliyopatikana",
+      "selected": "Iliyochaguliwa"
+    },
+    "visaRequirements": {
+      "title": "Mahitaji ya Visa",
+      "subtitle": "Hiki ndicho unachohitaji kujua kuhusu kuingia Tanzania",
+      "visaTypeFree": "Kuingia bila visa",
+      "visaTypeOnArrival": "Visa inapatikana wapo",
+      "visaTypeRequired": "Visa inahitajika",
+      "processingTime": "Muda wa Kushughulika: {{time}}",
+      "documentsRequired": "Hati Inayohitajika:",
+      "status": {
+        "free": "Unaweza kuingia Tanzania bila visa",
+        "onArrival": "Unaweza kuomba visa wapo",
+        "required": "Utahitaji kupanga visa kabla ya kuwasili"
+      }
+    },
+    "visaStatus": {
+      "title": "Je, ni nini hali yako ya visa?",
+      "subtitle": "Tusaidie kuelewa mchakato wako wa kuingia",
+      "option1": "Tayari nina visa",
+      "option1Description": "Tayari kusafiri",
+      "option2": "Ninataka kuomba visa",
+      "option2Description": "Hebu tuhazi hati zako",
+      "option3": "Sijahitaji visa au nitaomba baadaye",
+      "option3Description": "Endelea bila kuomba visa"
+    },
+    "visaApplication": {
+      "title": "Hati za Kuomba Visa",
+      "subtitle": "Pakua hati zako hapa",
+      "documentType": "Aina ya Hati",
+      "selectDocument": "Chagua hati...",
+      "passport": "Pasipoti",
+      "birthCertificate": "Kumbukumbu ya Kuzaliwa",
+      "travelInsurance": "Bima ya Kusafiri",
+      "bankStatement": "Kauli ya Benki",
+      "uploadFile": "Pakua Faili",
+      "additionalNotes": "Vidokezo vya Ziada",
+      "fileUploaded": "Faili limepakuwa kwa mafanikiwa",
+      "dragOrClick": "Buruta au bonyeza kupakua"
+    },
+    "registration": {
+      "title": "Tuambie kuhusu wewe",
+      "subtitle": "Usajili mfupi ili kubinafsisha uzoefu wako",
+      "firstName": "Jina la Kwanza",
+      "lastName": "Jina la Mwisho",
+      "nationality": "Taifa",
+      "whatsAppNumber": "Namba ya WhatsApp",
+      "privacyAssurance": "Taarifa zako ni salama na hutumiwa tu kwa arifa za WhatsApp",
+      "validationError": "Tafadhali jaza sehemu zote kwa usahihi",
+      "phoneFormatError": "Tafadhali ingiza namba ya simu halali"
+    },
+    "otpVerification": {
+      "title": "Thibitisha WhatsApp Yako",
+      "subtitle": "Ingiza nambari ya tarakimu 6 iliyotumwa kwa WhatsApp yako",
+      "otpInput": "Ingiza OTP",
+      "resendCode": "Tuma Tena Nambari",
+      "resendCountdown": "Tuma tena katika {{seconds}}s",
+      "verifyingOtp": "Inathibitisha OTP...",
+      "mockOtpTitle": "Mock OTP kwa Kupima",
+      "mockOtpMessage": "Nambari yako ya OTP ya kupima ni: {{code}}"
+    },
+    "success": {
+      "title": "Karibu kwa Korongo!",
+      "subtitle": "Umehazi kuchimba Tanzania",
+      "registrationSummary": "Usajili Umekamilika",
+      "name": "Jina",
+      "nationality": "Taifa",
+      "destination": "Mahali Palipopunguzwa",
+      "status": "Hali",
+      "redirecting": "Inaelekeza kwa Dashboard katika {{seconds}}s",
+      "goToDashboard": "Nenda kwa Dashboard"
+    }
+  }
+}

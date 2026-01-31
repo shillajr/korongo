@@ -77,7 +77,7 @@ export function Onboarding({ onComplete, onSkip }: OnboardingProps) {
       
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Progress Bar */}
-        <div className="w-full bg-muted h-1">
+        <div className="w-full bg-secondary h-1">
           <div 
             className="h-full bg-primary transition-all duration-300"
             style={{ width: `${(step / totalSteps) * 100}%` }}
@@ -85,52 +85,52 @@ export function Onboarding({ onComplete, onSkip }: OnboardingProps) {
         </div>
 
         {/* Content */}
-        <div className="flex-1 flex flex-col items-center justify-center p-6 max-w-md mx-auto w-full">
+        <div className="flex-1 flex flex-col items-center justify-center p-7 max-w-md mx-auto w-full">
           
           {/* Step 1: Welcome */}
           {step === 1 && (
-            <div className="text-center space-y-6 animate-in fade-in duration-500">
+            <div className="text-center space-y-7 animate-in fade-in duration-500">
               <div className="flex justify-center">
-                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center">
-                  <Trophy className="w-10 h-10 text-white" />
+                <div className="w-24 h-24 bg-gradient-to-br from-primary to-blue-600 rounded-[18px] flex items-center justify-center shadow-lg">
+                  <Trophy className="w-12 h-12 text-white" />
                 </div>
               </div>
-              <div className="space-y-3">
-                <h1 className="text-3xl font-bold">Welcome to Korongo</h1>
-                <p className="text-lg text-muted-foreground">
+              <div className="space-y-4">
+                <h1 className="text-4xl font-bold leading-tight">Welcome to Korongo</h1>
+                <p className="text-lg text-muted-foreground font-medium">
                   Your trusted guide for AFCON 2027
                 </p>
               </div>
-              <Card className="p-6 text-left space-y-4 bg-card/50 backdrop-blur">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-primary" />
+              <Card className="p-6 text-left space-y-4 bg-gradient-to-br from-white to-secondary/30 border border-border shadow-lg">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-[12px] flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1">Tri-Nation Tournament</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-bold text-base mb-1">Tri-Nation Tournament</h3>
+                    <p className="text-sm text-muted-foreground font-medium">
                       Hosted by Kenya, Tanzania, and Uganda
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-5 h-5 text-primary" />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-[12px] flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1">Works Offline</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-bold text-base mb-1">Works Offline</h3>
+                    <p className="text-sm text-muted-foreground font-medium">
                       Essential features available without internet
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <DollarSign className="w-5 h-5 text-primary" />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-warm-amber/10 rounded-[12px] flex items-center justify-center flex-shrink-0">
+                    <DollarSign className="w-6 h-6 text-warm-amber" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1">Multi-Currency</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-bold text-base mb-1">Multi-Currency</h3>
+                    <p className="text-sm text-muted-foreground font-medium">
                       Seamless payments in KES, TZS, UGX, and USD
                     </p>
                   </div>
@@ -141,10 +141,10 @@ export function Onboarding({ onComplete, onSkip }: OnboardingProps) {
 
           {/* Step 2: Journey Path Selection */}
           {step === 2 && (
-            <div className="w-full space-y-6 animate-in fade-in duration-500">
-              <div className="text-center space-y-2">
-                <h2 className="text-2xl font-bold">Plan Your Journey</h2>
-                <p className="text-muted-foreground">
+            <div className="w-full space-y-7 animate-in fade-in duration-500">
+              <div className="text-center space-y-3">
+                <h2 className="text-3xl font-bold">Plan Your Journey</h2>
+                <p className="text-base text-muted-foreground font-medium">
                   Select the order you'll visit the host countries
                 </p>
               </div>
@@ -176,50 +176,50 @@ export function Onboarding({ onComplete, onSkip }: OnboardingProps) {
 
           {/* Step 3: Requirements */}
           {step === 3 && (
-            <div className="w-full space-y-6 animate-in fade-in duration-500">
-              <div className="text-center space-y-2">
-                <h2 className="text-2xl font-bold">Travel Requirements</h2>
-                <p className="text-muted-foreground">
+            <div className="w-full space-y-7 animate-in fade-in duration-500">
+              <div className="text-center space-y-3">
+                <h2 className="text-3xl font-bold">Travel Requirements</h2>
+                <p className="text-base text-muted-foreground font-medium">
                   What you'll need for your journey
                 </p>
               </div>
 
               <div className="space-y-3">
-                <Card className="p-4 border-l-4 border-l-primary">
-                  <div className="flex items-start gap-3">
-                    <FileText className="w-5 h-5 text-primary mt-0.5" />
+                <Card className="p-5 border-l-4 border-l-primary shadow-md rounded-[14px]">
+                  <div className="flex items-start gap-4">
+                    <FileText className="w-6 h-6 text-primary mt-0.5 flex-shrink-0" />
                     <div className="flex-1">
-                      <h3 className="font-medium mb-1">EAC Visa</h3>
-                      <p className="text-sm text-muted-foreground mb-2">
+                      <h3 className="font-bold text-base mb-1">EAC Visa</h3>
+                      <p className="text-sm text-muted-foreground mb-2 font-medium">
                         Single visa valid across Kenya, Tanzania, and Uganda
                       </p>
-                      <div className="text-xs text-primary">✓ Apply through the app</div>
+                      <div className="text-xs text-primary font-bold">✓ Apply through the app</div>
                     </div>
                   </div>
                 </Card>
 
-                <Card className="p-4 border-l-4 border-l-amber-500">
-                  <div className="flex items-start gap-3">
-                    <Syringe className="w-5 h-5 text-amber-600 mt-0.5" />
+                <Card className="p-5 border-l-4 border-l-warm-amber shadow-md rounded-[14px]">
+                  <div className="flex items-start gap-4">
+                    <Syringe className="w-6 h-6 text-warm-amber mt-0.5 flex-shrink-0" />
                     <div className="flex-1">
-                      <h3 className="font-medium mb-1">Yellow Fever Vaccine</h3>
-                      <p className="text-sm text-muted-foreground mb-2">
+                      <h3 className="font-bold text-base mb-1">Yellow Fever Vaccine</h3>
+                      <p className="text-sm text-muted-foreground mb-2 font-medium">
                         Required for entry. Vaccine must be taken at least 10 days before travel.
                       </p>
-                      <div className="text-xs text-amber-600">⚠ Mandatory requirement</div>
+                      <div className="text-xs text-warm-amber font-bold">⚠ Mandatory requirement</div>
                     </div>
                   </div>
                 </Card>
 
-                <Card className="p-4 border-l-4 border-l-green-500">
-                  <div className="flex items-start gap-3">
-                    <DollarSign className="w-5 h-5 text-green-600 mt-0.5" />
+                <Card className="p-5 border-l-4 border-l-green-500 shadow-md rounded-[14px]">
+                  <div className="flex items-start gap-4">
+                    <DollarSign className="w-6 h-6 text-green-600 mt-0.5 flex-shrink-0" />
                     <div className="flex-1">
-                      <h3 className="font-medium mb-1">Currency Exchange</h3>
-                      <p className="text-sm text-muted-foreground mb-2">
+                      <h3 className="font-bold text-base mb-1">Currency Exchange</h3>
+                      <p className="text-sm text-muted-foreground mb-2 font-medium">
                         Local currencies: KES (Kenya), TZS (Tanzania), UGX (Uganda)
                       </p>
-                      <div className="text-xs text-green-600">✓ Exchange in-app</div>
+                      <div className="text-xs text-green-600 font-bold">✓ Exchange in-app</div>
                     </div>
                   </div>
                 </Card>
@@ -229,18 +229,18 @@ export function Onboarding({ onComplete, onSkip }: OnboardingProps) {
 
           {/* Step 4: Emergency Setup */}
           {step === 4 && (
-            <div className="w-full space-y-6 animate-in fade-in duration-500">
-              <div className="text-center space-y-2">
-                <h2 className="text-2xl font-bold">Emergency Information</h2>
-                <p className="text-muted-foreground">
+            <div className="w-full space-y-7 animate-in fade-in duration-500">
+              <div className="text-center space-y-3">
+                <h2 className="text-3xl font-bold">Emergency Information</h2>
+                <p className="text-base text-muted-foreground font-medium">
                   Help us keep you safe during your journey
                 </p>
               </div>
 
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="emergency-name" className="flex items-center gap-2">
-                    <User className="w-4 h-4" />
+                  <Label htmlFor="emergency-name" className="flex items-center gap-2 font-bold text-base">
+                    <User className="w-5 h-5" />
                     Emergency Contact Name
                   </Label>
                   <Input
@@ -248,13 +248,13 @@ export function Onboarding({ onComplete, onSkip }: OnboardingProps) {
                     placeholder="Full name"
                     value={emergencyName}
                     onChange={(e) => setEmergencyName(e.target.value)}
-                    className="h-12"
+                    className="h-12 rounded-[12px] text-base"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="emergency-phone" className="flex items-center gap-2">
-                    <Phone className="w-4 h-4" />
+                  <Label htmlFor="emergency-phone" className="flex items-center gap-2 font-bold text-base">
+                    <Phone className="w-5 h-5" />
                     Emergency Contact Phone
                   </Label>
                   <Input
@@ -263,20 +263,20 @@ export function Onboarding({ onComplete, onSkip }: OnboardingProps) {
                     placeholder="+255 700 000 000"
                     value={emergencyPhone}
                     onChange={(e) => setEmergencyPhone(e.target.value)}
-                    className="h-12"
+                    className="h-12 rounded-[12px] text-base"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="blood-type" className="flex items-center gap-2">
-                    <Droplet className="w-4 h-4" />
+                  <Label htmlFor="blood-type" className="flex items-center gap-2 font-bold text-base">
+                    <Droplet className="w-5 h-5" />
                     Blood Type
                   </Label>
                   <select
                     id="blood-type"
                     value={bloodType}
                     onChange={(e) => setBloodType(e.target.value)}
-                    className="w-full h-12 px-3 rounded-lg border border-border bg-background"
+                    className="w-full h-12 px-4 rounded-[12px] border border-border bg-background font-medium text-base"
                   >
                     <option value="A+">A+</option>
                     <option value="A-">A-</option>
@@ -289,12 +289,12 @@ export function Onboarding({ onComplete, onSkip }: OnboardingProps) {
                   </select>
                 </div>
 
-                <Card className="p-4 bg-blue-50 border-blue-200">
-                  <div className="flex items-start gap-3">
-                    <Building2 className="w-5 h-5 text-blue-600 mt-0.5" />
+                <Card className="p-5 bg-gradient-to-br from-blue-600/10 to-blue-100/10 border-blue-200/50 shadow-md rounded-[14px]">
+                  <div className="flex items-start gap-4">
+                    <Building2 className="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0" />
                     <div className="flex-1">
-                      <h3 className="font-medium mb-1 text-blue-900">Embassy Contacts</h3>
-                      <p className="text-sm text-blue-700">
+                      <h3 className="font-bold text-base mb-1 text-blue-900">Embassy Contacts</h3>
+                      <p className="text-sm text-blue-700 font-medium">
                         We'll automatically provide embassy contacts based on your location
                       </p>
                     </div>
@@ -364,13 +364,13 @@ export function Onboarding({ onComplete, onSkip }: OnboardingProps) {
         </div>
 
         {/* Navigation */}
-        <div className="p-6 border-t border-border bg-background/80 backdrop-blur">
+        <div className="p-7 border-t border-border bg-white shadow-lg">
           <div className="flex gap-3 max-w-md mx-auto">
             {step > 1 && (
               <Button
                 variant="outline"
                 onClick={() => setStep(step - 1)}
-                className="flex-1"
+                className="flex-1 h-12 font-bold text-base"
                 size="lg"
               >
                 Back
@@ -385,7 +385,7 @@ export function Onboarding({ onComplete, onSkip }: OnboardingProps) {
                 }
               }}
               disabled={!canProceed()}
-              className="flex-1"
+              className="flex-1 h-12 font-bold text-base shadow-md"
               size="lg"
             >
               {step === totalSteps ? 'Start Exploring' : 'Continue'}
@@ -396,7 +396,7 @@ export function Onboarding({ onComplete, onSkip }: OnboardingProps) {
               <Button
                 variant="ghost"
                 onClick={onSkip}
-                className="w-full"
+                className="w-full h-11 font-semibold text-base"
                 size="lg"
               >
                 Skip to Dashboard
@@ -425,19 +425,19 @@ function PathOption({ path, selected, onSelect }: PathOptionProps) {
   return (
     <button
       onClick={() => onSelect(path)}
-      className={`w-full p-4 rounded-xl border-2 transition-all ${
+      className={`w-full p-5 rounded-[14px] border-2 transition-all shadow-sm ${
         selected
-          ? 'border-primary bg-primary/5'
-          : 'border-border hover:border-primary/50'
+          ? 'border-primary bg-gradient-to-br from-primary/8 to-primary/5 shadow-md'
+          : 'border-border hover:border-primary/40 hover:shadow-sm'
       }`}
     >
       <div className="flex items-center gap-3">
         <div className="flex items-center gap-2 flex-1">
           {path.map((country, index) => (
             <div key={country} className="contents">
-              <div className="flex flex-col items-center gap-1">
+              <div className="flex flex-col items-center gap-1.5">
                 <CountryFlag country={country} size="sm" />
-                <span className="text-xs">{countryNames[country]}</span>
+                <span className="text-xs font-medium">{countryNames[country]}</span>
               </div>
               {index < path.length - 1 && (
                 <ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
@@ -446,7 +446,7 @@ function PathOption({ path, selected, onSelect }: PathOptionProps) {
           ))}
         </div>
         {selected && (
-          <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+          <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
             <Check className="w-4 h-4 text-white" />
           </div>
         )}

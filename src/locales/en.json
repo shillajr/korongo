@@ -1,0 +1,107 @@
+{
+  "common": {
+    "next": "Next",
+    "back": "Back",
+    "continue": "Continue",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "skip": "Skip",
+    "close": "Close",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "errorOccurred": "An error occurred. Please try again.",
+    "whatsAppNumber": "WhatsApp Number",
+    "email": "Email"
+  },
+  "arrivalFlow": {
+    "welcome": {
+      "title": "Welcome to Tanzania",
+      "subtitle": "Your trusted guide for exploring East Africa",
+      "description": "Let's get you set up for an amazing journey",
+      "benefit1Title": "Trust & Safety",
+      "benefit1Description": "Verified locations and verified local guides",
+      "benefit2Title": "Real-time Guidance",
+      "benefit2Description": "Get notifications and live updates throughout your stay",
+      "benefit3Title": "Local Services",
+      "benefit3Description": "Discover hidden gems and authentic experiences"
+    },
+    "countrySelector": {
+      "title": "Where are you arriving from?",
+      "subtitle": "Select your country of origin",
+      "searchPlaceholder": "Search countries...",
+      "noResults": "No countries found",
+      "selected": "Selected"
+    },
+    "visaRequirements": {
+      "title": "Visa Requirements",
+      "subtitle": "Here's what you need to know about entering Tanzania",
+      "visaTypeFree": "Visa-free entry",
+      "visaTypeOnArrival": "Visa on arrival available",
+      "visaTypeRequired": "Visa required",
+      "processingTime": "Processing Time: {{time}}",
+      "documentsRequired": "Documents Required:",
+      "status": {
+        "free": "You can enter Tanzania without a visa",
+        "onArrival": "You can apply for a visa upon arrival",
+        "required": "You'll need to arrange a visa before arriving"
+      }
+    },
+    "visaStatus": {
+      "title": "What's your visa situation?",
+      "subtitle": "Help us understand your entry process",
+      "option1": "I already have a visa",
+      "option1Description": "Ready to travel",
+      "option2": "I want to apply for a visa",
+      "option2Description": "Let's get your documents ready",
+      "option3": "I don't need a visa or will apply later",
+      "option3Description": "Proceed without visa application"
+    },
+    "visaApplication": {
+      "title": "Visa Application Documents",
+      "subtitle": "Upload your documents here",
+      "documentType": "Document Type",
+      "selectDocument": "Select a document...",
+      "passport": "Passport",
+      "birthCertificate": "Birth Certificate",
+      "travelInsurance": "Travel Insurance",
+      "bankStatement": "Bank Statement",
+      "uploadFile": "Upload File",
+      "additionalNotes": "Additional Notes",
+      "fileUploaded": "File uploaded successfully",
+      "dragOrClick": "Drag or click to upload"
+    },
+    "registration": {
+      "title": "Tell us about yourself",
+      "subtitle": "Quick registration to personalize your experience",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "nationality": "Nationality",
+      "whatsAppNumber": "WhatsApp Number",
+      "privacyAssurance": "Your information is secure and only used for WhatsApp notifications",
+      "validationError": "Please fill in all fields correctly",
+      "phoneFormatError": "Please enter a valid phone number"
+    },
+    "otpVerification": {
+      "title": "Verify Your WhatsApp",
+      "subtitle": "Enter the 6-digit code sent to your WhatsApp",
+      "otpInput": "Enter OTP",
+      "resendCode": "Resend Code",
+      "resendCountdown": "Resend in {{seconds}}s",
+      "verifyingOtp": "Verifying OTP...",
+      "mockOtpTitle": "Mock OTP for Testing",
+      "mockOtpMessage": "Your test OTP code is: {{code}}"
+    },
+    "success": {
+      "title": "Welcome to Korongo!",
+      "subtitle": "You're all set to explore Tanzania",
+      "registrationSummary": "Registration Complete",
+      "name": "Name",
+      "nationality": "Nationality",
+      "destination": "Destination",
+      "status": "Status",
+      "redirecting": "Redirecting to Dashboard in {{seconds}}s",
+      "goToDashboard": "Go to Dashboard"
+    }
+  }
+}

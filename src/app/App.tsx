@@ -12,6 +12,7 @@ import { OfflineIndicator } from './components/OfflineIndicator';
 import { BottomNav } from './components/BottomNav';
 import { LoadingScreen } from './components/LoadingScreen';
 import { FanId } from './components/FanId';
+import { ArrivingUserFlow } from './components/flows/ArrivingUserFlow';
 import { Button } from '@/app/components/ui/button';
 import { Input } from '@/app/components/ui/input';
 import { CreditCard, Edit2, Check, X } from 'lucide-react';
@@ -25,6 +26,7 @@ export default function App() {
   const [showEmergency, setShowEmergency] = useState(false);
   const [paymentNumber, setPaymentNumber] = useState('');
   const [isEditingPayment, setIsEditingPayment] = useState(false);
+  const [showArrivalFlow, setShowArrivalFlow] = useState(false);
   
   // Default location set to Tanzania
   const [currentCountry, setCurrentCountry] = useState<Country>('tanzania');
@@ -35,6 +37,18 @@ export default function App() {
     // Simulate initial loading
     const timer = setTimeout(() => {
       setIsLoading(false);
+      
+      // Check if user has completed the arrival flow
+      const savedArrivalFlow = localStorage.getItem('korongo_arrival_flow');
+      const arrivalFlowCompleted = savedArrivalFlow && JSON.parse(savedArrivalFlow).isCompleted;
+      
+      // Check if first time user (no onboarding and no completed arrival flow)
+      const korongoOnboarding = localStorage.getItem('korongoOnboarding');
+      const isFirstTime = !korongoOnboarding && !arrivalFlowCompleted;
+      
+      if (isFirstTime) {
+        setShowArrivalFlow(true);
+      }
     }, 2000);
 
     // Load saved payment number from localStorage
@@ -78,6 +92,29 @@ export default function App() {
 
   if (isLoading) {
     return <LoadingScreen />;
+  }
+
+  // Show arrival flow for first-time users arriving in Tanzania
+  if (showArrivalFlow) {
+    return (
+      <ArrivingUserFlow
+        onComplete={() => {
+          setShowArrivalFlow(false);
+          // Skip the old onboarding and go straight to dashboard
+          const defaultData: OnboardingData = {
+            journeyPath: ['tanzania', 'uganda', 'zambia'],
+            emergencyContact: {
+              name: '',
+              phone: '',
+              bloodType: 'O+'
+            }
+          };
+          setOnboardingData(defaultData);
+          setHasCompletedOnboarding(true);
+          localStorage.setItem('korongoOnboarding', JSON.stringify(defaultData));
+        }}
+      />
+    );
   }
 
   if (!hasCompletedOnboarding) {
